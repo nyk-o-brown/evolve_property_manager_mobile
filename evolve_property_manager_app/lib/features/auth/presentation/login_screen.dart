@@ -79,12 +79,9 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(height: 24),
             ElevatedButton(
               onPressed: () {
-                // TODO: Implement login logic
+                // TODO: Call login API via provider
                 context.go('/dashboard');
               },
-              style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(vertical: 12),
-              ),
               child: const Text('Login'),
             ),
             const SizedBox(height: 16),
