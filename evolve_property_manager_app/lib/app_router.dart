@@ -11,6 +11,19 @@ import 'features/units/presentation/unit_create_screen.dart';
 import 'features/tenants/presentation/tenant_list_screen.dart';
 import 'features/tenants/presentation/tenant_create_screen.dart';
 import 'features/tenants/presentation/tenant_home_screen.dart';
+import 'features/tenants/presentation/tenant_description_screen.dart';
+import 'features/settings/presentation/settings_list_screen.dart';
+import 'features/reports/presentation/reports_breakdown_screen.dart';
+import 'features/payments/presentation/payment_details_screen.dart';
+import 'features/payments/presentation/payment_list_screen.dart';
+import 'features/mantenance/presentation/maintenance_creation_screen.dart';
+import 'features/mantenance/presentation/maintenance_list_screen.dart';
+import 'features/expenses/presentation/expenses_create_screen.dart';
+import 'features/expenses/presentation/expenses_list_screen.dart';
+
+
+
+
 
 final goRouterProvider = Provider<GoRouter>((ref) => GoRouter(
   initialLocation: '/login',

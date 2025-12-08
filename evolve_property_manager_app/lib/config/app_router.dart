@@ -1,4 +1,6 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import """
+package:flutter_riverpod/flutter_riverpod.dart""" show Provider;
+
 import 'package:go_router/go_router.dart';
 import 'package:evolve_property_manager_app/screens/dashboard_screen.dart';
 import 'package:evolve_property_manager_app/screens/tenant_list_screen.dart';

@@ -20,9 +20,7 @@ class DashboardScreen extends StatelessWidget {
           ),
           IconButton(
             icon: const Icon(Icons.settings),
-            onPressed: () {
-              // TODO: Navigate to settings
-            },
+            onPressed: () => context.go('/dashboard/settings'),
           ),
         ],
       ),
@@ -53,30 +51,56 @@ class DashboardScreen extends StatelessWidget {
               physics: const NeverScrollableScrollPhysics(),
               mainAxisSpacing: 16,
               crossAxisSpacing: 16,
+              childAspectRatio: 1.1,
               children: [
                 DashboardCard(
                   title: 'Properties',
                   icon: Icons.house,
+                  //value: '12',
+                  backgroundColor: Colors.blue,
                   onTap: () => context.go('/dashboard/properties'),
                 ),
                 DashboardCard(
-                  title: 'Tenant Dashboard',
-                  icon: Icons.person,
-                  onTap: () => context.go('/tenant/dashboard'),
-                ),
-                DashboardCard(
-                  title: 'Maintenance',
-                  icon: Icons.build,
-                  onTap: () {
-                    // TODO: Navigate to maintenance
-                  },
+                  title: 'Tenants',
+                  icon: Icons.people,
+                  //value: '45',
+                  backgroundColor: Colors.green,
+                  onTap: () => context.go('/dashboard/tenants'),
                 ),
                 DashboardCard(
                   title: 'Payments',
                   icon: Icons.payment,
-                  onTap: () {
-                    // TODO: Navigate to payments
-                  },
+                  //value: '\$5,230',
+                  backgroundColor: Colors.orange,
+                  onTap: () => context.go('/dashboard/payments'),
+                ),
+                DashboardCard(
+                  title: 'Maintenance',
+                  icon: Icons.build,
+                  //value: '8',
+                  backgroundColor: Colors.red,
+                  onTap: () => context.go('/dashboard/maintenance'),
+                ),
+                DashboardCard(
+                  title: 'Reports',
+                  icon: Icons.analytics,
+                  //value: '3',
+                  backgroundColor: Colors.purple,
+                  onTap: () => context.go('/dashboard/reports'),
+                ),
+                DashboardCard(
+                  title: 'Settings',
+                  icon: Icons.settings,
+                  //value: '',
+                  backgroundColor: Colors.grey,
+                  onTap: () => context.go('/dashboard/settings'),
+                ),
+                DashboardCard(
+                  title: 'Expenses',
+                  icon: Icons.money_off,
+                  //value: '\$3,450',
+                  backgroundColor: Colors.teal,
+                  onTap: () => context.go('/dashboard/expenses'),
                 ),
               ],
             ),
@@ -89,7 +113,6 @@ class DashboardScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            // TODO: Add recent activity list
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(

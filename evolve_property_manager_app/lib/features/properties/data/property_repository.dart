@@ -7,7 +7,7 @@ class PropertyRepository {
   PropertyRepository(this._apiService);
 
   Future<List<Property>> getProperties() async {
-    final response = await _apiService.get('/properties');
+    final response = await _apiService.get('./get_properties.php');
     final propertiesList = response['properties'] ?? response['data'] ?? [];
     return (propertiesList as List)
         .map((p) => Property.fromJson(p as Map<String, dynamic>))
